@@ -35,7 +35,9 @@ update accounts set "city"='santa fe' where "username"='anthony';
 
 Delete from accounts where "username"='grace';
 --Travis made a withdrawl of $20,000. What's their new balance? NOTE: Research RETURNING
+UPDATE accounts SET "account_balance" = account_balance-20000 
+  WHERE username='travis'
+  RETURNING account_balance as new_balance;
 
-
-The Bank needs to track last names. NOTE: Research ALTER TABLE https://www.postgresql.org/docs/10/static/sql-altertable.html
+--The Bank needs to track last names. NOTE: Research ALTER TABLE https://www.postgresql.org/docs/10/static/sql-altertable.html
 
